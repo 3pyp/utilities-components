@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.register-card {
+  overflow: hidden;
+  position: relative;
+  background: rgb(71, 71, 71);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-card:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0.3;
+  background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+.register-card .card {
+  background: #fff;
+  z-index: 2;
+  padding: 50px;
+  width: 35%;
+  box-shadow: 5px 5px 5px rgba(59, 59, 59, 0.705);
+}
+.register-card .card .title {
+  padding: 0 0 30px;
+}
+.register-card .card .title h2 {
+  font-size: 2.5em;
+  color: rgb(104, 104, 104);
+}
+.register-card .card .text {
+  padding: 0 0 20px;
+  color: rgb(104, 104, 104);
+}
+
+.register-card .card .btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  padding: 20px 0 0;
+}
+.register-card .card .btn-container .btn {
+  background: rgb(104, 104, 104);
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 2px 25px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.register-card .card .btn-container .btn:hover {
+  background: none;
+  border: 1px solid rgb(104, 104, 104);
+  color: rgb(104, 104, 104);
+}
+
+@media screen and (max-width: 1200px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+  .register-card .card {
+    width: 45%;
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  body,
+  html {
+    font-size: 14px;
+  }
+  .register-card .card {
+    width: 60%;
+    padding: 30px;
+  }
+  .register-card .card .title {
+    padding: 0 0 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .register-card .card {
+    width: 90%;
+  }
+  .register-card .card .title h2 {
+    font-size: 2.2em;
+    color: rgb(104, 104, 104);
+  }
+}
