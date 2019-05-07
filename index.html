@@ -15,7 +15,52 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="Header">
+    <div class="menu-container">
+      <div id="bars-container" class="bars-container">
+        <div id="bars" class="bars">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div id="overlay" class="overlay"></div>
+      <div id="menu" class="menu">
+        <div class="menu-content">
+          <div class="menu-top">
+            <div id="close-btn" class="close-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <div class="options">
+              <ul>
+                <li id="home" class="active-option">HOME</li>
+                <li id="nosotros">NOSOTROS</li>
+                <li id="registrate">REGISTRATE</li>
+                <li id="contacto">CONTACTO</li>
+              </ul>
+            </div>
+          </div>
+          <div class="social-media">
+            <div class="facebook">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </div>
+            <div class="instagram">
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="youtube">
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BODY BODY -->
+    <!-- BODY BODY -->
+    <!-- BODY BODY -->
+    <div id="home_id" class="Header">
       <div class="header-elements">
         <div class="logo">
           <img src="https://dummyimage.com/400x400/cecece/fff" alt="" />
@@ -36,7 +81,7 @@
         </div>
       </div>
     </div>
-    <div class="main">
+    <div id="nosotros_id" class="main">
       <div class="info-cards">
         <div class="card-image">
           <img
@@ -69,10 +114,10 @@
             </h4>
           </div>
           <div class="btn-container">
-              <span class="btn">
-                Lorem Ipsum
-              </span>
-            </div>
+            <span class="btn">
+              Lorem Ipsum
+            </span>
+          </div>
         </div>
         <div class="card-image cst-image">
           <img
@@ -80,10 +125,9 @@
             alt=""
           />
         </div>
-        
       </div>
     </div>
-    <div class="register-card">
+    <div id="registrate_id" class="register-card">
       <div class="card">
         <div class="title">
           <h2>Lorem ipsum</h2>
@@ -106,5 +150,37 @@
         </div>
       </div>
     </div>
+    <div class="footer">
+      <div class="text-footer">
+        <div class="text-title">
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="text-subtitle"><p>Lorem ipsum, dolor</p></div>
+      </div>
+      <div class="socialmedia-footer">
+        <div class="facebook">
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+        <div class="instagram">
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="youtube">
+          <a href="#">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
   </body>
 </html>

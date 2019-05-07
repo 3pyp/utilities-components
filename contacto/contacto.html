@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>La Hermandad</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="contacto">
+      <div class="titulo_contacto">
+        <h2>CONTACTO</h2>
+      </div>
+      <div class="form">
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          name="email"
+          id=""
+        />
+        <textarea
+          placeholder="Mensaje"
+          id="mensaje"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input id="button" type="button" onclick="ajax.send()" value="Enviar" />
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let ajax = {
+        isSubmiting: false,
+        send: function() {
+          if (ajax.isSubmiting === false) {
+            ajax.isSubmiting = true;
+            let userEmail = $("input[name=email]").val();
+            let userMessage = $("textarea").val();
+            if (userEmail == "" || userMessage == "") {
+              alert("Por favor complete el formulario");
+            } else {
+              ajax.setText("Enviando...");
+              $.post(
+                "./sendmail.php",
+                {
+                  email: userEmail,
+                  message: userMessage
+                },
+                function(data) {
+                  if (data === "true") {
+                    ajax.setText("Enviado!");
+                  } else {
+                    ajax.setText("Enviar");
+                    alert(data);
+                  }
+                  ajax.isSubmiting = false;
+                }
+              );
+            }
+          }else {
+              alert("Sólo puedes enviar un mensaje a la vez")
+          }
+        },
+        setText: function(text) {
+          $("input[type=button]").val(text);
+        }
+      };
+    </script>
+  </body>
+</html>
